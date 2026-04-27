@@ -32,7 +32,18 @@ This project analyzes user activity (steps), sleep, and health data from Fitbit 
 - Google Sheets (data validation)
 
 ---
+## 📊 Dashboard Preview
 
+### Overview
+![Overview](dashboard/fitbit_dashboard_1.jpg)
+
+### Behavior Analysis
+![Behavior](dashboard/fitbit_dashboard_2.jpg)
+
+### Health Insights
+![Health](dashboard/fitbit_dashboard_3.jpg)
+
+---
 ## 📎 Dataset
 Full dataset available on Kaggle:
 [https://www.kaggle.com/datasets/arashnic/fitbit](https://www.kaggle.com/datasets/arashnic/fitbit)
