@@ -32,6 +32,42 @@ This project analyzes user activity (steps), sleep, and health data from Fitbit 
 - Google Sheets (data validation)
 
 ---
+## 🔧 Data Preparation (SQL)
+Data cleaning and transformation were performed using SQL. The process included:
+
+- Converting data types (VARCHAR → DECIMAL, DATE, DATETIME)  
+- Standardizing date formats across tables  
+- Handling missing values and inconsistent entries  
+- Creating a structured relational model with primary and foreign keys  
+
+### Example:
+```
+sql
+UPDATE daily_activity
+SET TotalDistance = ROUND(CAST(TotalDistance AS DECIMAL(10,5)), 2);
+```
+---
+
+## 🧱 Data Modeling
+
+To ensure data integrity and scalability:
+
+- Composite primary key used for daily_activity
+- Surrogate keys implemented for sleep_day and weight_log_info
+- Foreign keys used to connect all tables to the users table
+
+---
+
+## 📊 Data Transformation
+
+Analytical views were created to prepare the dataset for visualization:
+
+- User-level aggregations (steps, calories, sleep, weight, BMI)
+- Activity level classification (Sedentary, Moderate, Active)
+- BMI categorization (Underweight, Normal, Overweight, Obese)
+
+---
+
 ## 📊 Dashboard Preview
 
 ### Overview
