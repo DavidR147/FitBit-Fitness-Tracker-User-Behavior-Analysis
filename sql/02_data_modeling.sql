@@ -31,7 +31,6 @@ ADD PRIMARY KEY (Id, ActivityDate);
 
 -- Add foreign key
 ALTER TABLE daily_activity
-ADD CONSTRAINT fk_daily_user
 FOREIGN KEY (Id) REFERENCES users(user_id);
 
 
@@ -51,7 +50,6 @@ ADD sleep_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY;
 
 -- Add foreign key
 ALTER TABLE sleep_day
-ADD CONSTRAINT fk_sleep_user
 FOREIGN KEY (Id) REFERENCES users(user_id);
 
 
@@ -71,5 +69,4 @@ ADD weight_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY;
 
 -- Add foreign key
 ALTER TABLE weight_log_info
-ADD CONSTRAINT fk_weight_user
 FOREIGN KEY (Id) REFERENCES users(user_id);
